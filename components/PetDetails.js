@@ -12,6 +12,7 @@ import {
   FaToilet,
   FaCheck,
   FaMinus,
+  FaDotCircle,
 } from 'react-icons/fa'
 import { GiMeat } from 'react-icons/gi'
 
@@ -26,23 +27,9 @@ export default function PetDetails({ pet }) {
             <span>{pet.location}</span>
           </div>
         </div>
-        {/* <div className={styles.image}>
-          {pet.images[0] && (
-            <Image
-              src={pet.images[0]?.formats.thumbnail.url}
-              layout='fill'
-              objectFit='cover'
-            />
-          )}
-        </div> */}
       </div>
 
       <div className={styles.cards}>
-        {/* <div className={styles.card}>
-          Activity <FaBolt className={styles.icon} />
-          {pet.activity}
-        </div> */}
-
         <div
           className={classNames(styles.card, {
             [styles.card_false]: !pet.isCatsFriendly,
@@ -99,8 +86,17 @@ export default function PetDetails({ pet }) {
 
       <div className={styles.char}>
         <span>{pet.age}</span>
+        <span>
+          <FaDotCircle size={10} />
+        </span>
         <span>{pet.gender}</span>
+        <span>
+          <FaDotCircle size={10} />
+        </span>
         <span>{pet.size}</span>
+        <span>
+          <FaDotCircle size={10} />
+        </span>
         <span>{pet.color}</span>
       </div>
       <div className={styles.info}>

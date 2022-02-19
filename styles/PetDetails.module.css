@@ -93,7 +93,7 @@
 
 .char {
   font-size: 16px;
-  color: #6e6e73d7;
+  color: var(--gray-text);
   padding: 15px 0;
   border-top: 1px solid var(--light);
   border-bottom: 1px solid var(--light);
@@ -102,9 +102,10 @@
 .char span {
   margin-right: 16px;
   position: relative;
+  display: inline-flex;
 }
 
-.char span:not(:last-child)::after {
+/* .char span:not(:last-child)::after {
   content: '';
   position: absolute;
   top: 40%;
@@ -113,7 +114,7 @@
   height: 5px;
   border-radius: 50%;
   background-color: rgb(138, 138, 138);
-}
+} */
 
 .info {
   padding: 15px 0;
