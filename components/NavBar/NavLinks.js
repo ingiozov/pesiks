@@ -37,12 +37,12 @@ export default function NavLinks({ isMobile, closeMenu }) {
           <li onClick={() => isMobile && closeMenu()}>
             <Link href='/account/login'>Войти</Link>
           </li>
+
+          <li onClick={() => isMobile && closeMenu()}>
+            <Link href='/about'>Контакты</Link>
+          </li>
         </>
       )}
-
-      <li onClick={() => isMobile && closeMenu()}>
-        <Link href='/about'>Контакты</Link>
-      </li>
     </ul>
   )
 }
