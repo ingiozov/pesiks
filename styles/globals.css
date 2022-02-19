@@ -159,3 +159,7 @@ h2 {
 .progress__seek {
   background-color: var(--teal);
 }
+
+.text-align-r {
+  text-align: right;
+}

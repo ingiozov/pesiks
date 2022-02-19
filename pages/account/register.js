@@ -39,7 +39,7 @@ export default function RegisterPage() {
 
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor='username'>Логин</label>
+            <label htmlFor='username'>Имя</label>
             <input
               type='text'
               id='username'

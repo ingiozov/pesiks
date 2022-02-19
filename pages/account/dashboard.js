@@ -9,9 +9,13 @@ import PetCards from '../../components/PetCards'
 import PetCard from '../../components/PetCard'
 import { API_URL } from '../../config'
 import styles from '../../styles/Dashboard.module.css'
+import { useContext } from 'react'
+import AuthContext from '../../context/AuthContext'
 
 export default function DashboardPage({ dogs, token }) {
   const router = useRouter()
+
+  const { user } = useContext(AuthContext)
 
   const deleteDog = async (id) => {
     if (confirm('Вы уверенны?')) {
@@ -34,8 +38,10 @@ export default function DashboardPage({ dogs, token }) {
 
   return (
     <Layout title={'Мои пёсики'}>
+      {user && <h3 className='text-align-r'>Привет {user.username}</h3>}
       <h1>Мои пёсики</h1>
       <ToastContainer />
+
       <PetCards>
         {dogs.map((dog) => (
           <div key={dog.id} className='petcard'>
